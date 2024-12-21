@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="my-5 text-center">Have seen those pets? 🦊</h1>
+  <%= link_to "I found a pet", new_pet_path, class: "btn btn-primary text-center mb-3 w-100"  %>
+  <div class="row">
+    <% @pets.each do |pet| %>
+      <div class="col-4">
+        <div class="card mb-3" style=>
+        <div class="card-body">
+          <h5 class="card-title"><%= pet.name %></h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">🔍 A <%= pet.color %> <%= pet.species %></h6>
+          <p class="card-text">📍 <%= pet.address %></p>
+          <p class="card-text">🕑 <%= pet.days_ago %></p>
+          <%= link_to "More...", pet_path(pet), class: "btn btn-primary"  %>
+        </div>
+      </div>
+      </div>
+    <% end %>
+  </div>
+</div>

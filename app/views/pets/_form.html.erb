@@ -1,0 +1,10 @@
+<div class="w-100">
+  <%= simple_form_for pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :color %>
+  <%= f.input :address %>
+  <%= f.input :species, collection: Pet::SPECIES %>
+  <%= f.input :found_on, html5: true %>
+  <%= f.submit "Register a pet" , class: "btn btn-primary" %>
+<% end %>
+</div>

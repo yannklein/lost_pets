@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="my-5 text-center">Have seen <%= @pet.name %>? 🦊</h1>
+    <div class="col-12">
+      <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= @pet.name %></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">🔍 A <%= @pet.color %> <%= @pet.species %></h6>
+        <p class="card-text">📍 <%= @pet.address %></p>
+        <p class="card-text">🕑 <%= @pet.days_ago %></p>
+      </div>
+    </div>
+  </div>
+  <%= link_to "Back", pets_path, class: "btn btn-primary" %>
+</div>
